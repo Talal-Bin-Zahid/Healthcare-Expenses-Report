@@ -3,204 +3,242 @@
 
 ---
 
-📌 Project Overview
+## 📌 Project Overview
 
-The Healthcare Expenses Report is an interactive Power BI dashboard designed to provide a comprehensive analysis of healthcare costs, patient demographics, medical conditions, insurance coverage, and provider performance.
-The report covers data from 2020 to early 2024, enabling stakeholders to monitor cost trends, understand patient distribution, and evaluate healthcare provider efficiency.
+The **Healthcare Expenses Report** is an end-to-end, interactive **Power BI dashboard** built to analyze healthcare costs, patient demographics, medical conditions, insurance coverage, and provider performance. The report spans **January 2020 to early 2024** and is designed to support **financial oversight, operational efficiency, and strategic decision-making** for healthcare stakeholders.
 
-
----
-
-🎯 Introduction
-
-Rising healthcare costs demand transparent and data-driven insights. This dashboard consolidates billing, demographic, and clinical data into a single analytical view, empowering healthcare administrators, analysts, and decision-makers to:
-
-Track billing trends over time
-
-Analyze patient demographics
-
-Compare insurance providers
-
-Evaluate doctors and hospitals based on billing performance
-
-
+This dashboard centralizes clinical, demographic, and billing data into a single analytical layer, enabling users to identify trends, compare providers, and uncover cost drivers across the healthcare ecosystem.
 
 ---
 
-📊 Key Performance Indicators (KPIs)
+## 🎯 Business Objectives
 
-Metric	Value	Description
-
-Total Patients	55.50K	Number of patients included in the analysis
-Total Billing	$1.42bn	Total healthcare billing amount
-Average Billing per Patient	$25.54K	Mean billing amount per patient
-Average Patient Age	51.54 years	Average age across all patients
-Average Billing per Condition	$236.24M	Average total billing per medical condition
-
-
+* Monitor **healthcare billing trends** over time
+* Understand **patient distribution** by age, gender, and medical condition
+* Evaluate **insurance provider contributions**
+* Identify **high-billing doctors and hospitals**
+* Analyze **admission patterns** across genders
+* Support data-driven decisions for **cost optimization and resource allocation**
 
 ---
 
-📈 Dashboard Features & Visualizations
+## 📊 Global KPIs (Report-Level Metrics)
 
-1️⃣ Billing Trends Over Time
-
-Visualization: Line Chart
-
-Description: Displays monthly billing amounts from 2020 to early 2024.
-
-Key Insight: A noticeable drop-off in billing in the most recent period, likely indicating incomplete or partial data.
-
-
-
----
-
-2️⃣ Patient Demographics (Gender Distribution)
-
-Visualization: Donut Chart
-
-Breakdown:
-
-Female: 27.73K (≈49.96%)
-
-Male: 27.77K (≈50.04%)
-
-
-Key Insight: Patient distribution is nearly perfectly balanced across genders.
-
-
+| KPI                                       | Value           | Description                                             |
+| ----------------------------------------- | --------------- | ------------------------------------------------------- |
+| **Total Patients**                        | **55.50K**      | Total number of patients included in the dataset        |
+| **Total Billing Amount**                  | **$1.42B**      | Aggregate healthcare billing across all years           |
+| **Average Billing per Patient**           | **$25.54K**     | Mean billing amount per patient                         |
+| **Average Patient Age**                   | **51.54 Years** | Average age of all patients                             |
+| **Average Billing per Medical Condition** | **$236.24M**    | Mean billing contribution per condition                 |
+| **Primary Medical Condition (Filter)**    | **Arthritis**   | Default selected condition used for contextual analysis |
 
 ---
 
-3️⃣ Patients by Medical Condition
+## 📈 Dashboard Pages & Visualizations
 
-Visualization: Horizontal Bar Chart
+### 1️⃣ Billing Amount by Month
 
-Conditions Analyzed:
+**Visualization Type:** Line Chart
+**Metrics Used:** Total Billing Amount, Date (Month-Year)
 
-Arthritis: 9.31K
+**Description:**
+Displays monthly healthcare billing trends from 2020 to early 2024.
 
-Diabetes: 9.30K
+**Key Observations:**
 
-Hypertension: 9.25K
-
-Obesity
-
-Cancer
-
-Asthma
-
-
-Key Insight: Patient volumes are fairly evenly distributed across major chronic conditions.
-
-
+* Billing remains relatively stable year-over-year
+* Minor fluctuations reflect seasonal or utilization changes
+* A sharp decline in the latest period suggests **incomplete or partial data** rather than an actual cost reduction
 
 ---
 
-4️⃣ Insurance Provider Comparison
+### 2️⃣ Patient Demographics – Gender Distribution
 
-Visualization: Bar Chart
+**Visualization Type:** Donut Chart
+**Metrics Used:** Patient Count, Gender
 
-Providers Included:
+**Breakdown:**
 
-Cigna: ~$287M
+* **Male:** 27.77K (50.04%)
+* **Female:** 27.73K (49.96%)
 
-Medicare
-
-Blue Cross
-
-UnitedHealthcare
-
-Aetna
-
-
-Key Insight: Billing amounts are relatively consistent across major insurers, with Cigna slightly leading.
-
-
+**Insight:**
+Patient distribution is almost perfectly balanced across genders, indicating no demographic skew.
 
 ---
 
-5️⃣ Provider Performance Analysis
+### 3️⃣ Patients by Medical Condition
 
-🔹 Top Doctors by Billing
+**Visualization Type:** Horizontal Bar Chart
+**Metrics Used:** Patient Count, Medical Condition
 
-Visualization: Ranked Bar Chart
+**Conditions & Volumes:**
 
-Example:
+* Arthritis: **9.31K**
+* Diabetes: **9.30K**
+* Hypertension: **9.25K**
+* Obesity: **~9.23K**
+* Cancer: **~9.22K**
+* Asthma: **9.19K**
 
-Michael Smith – $0.78M
-
-
-Purpose: Identifies high-billing physicians for performance and workload assessment.
-
-
-🔹 Top 10 Hospitals by Billing
-
-Visualization: Treemap
-
-Purpose: Highlights hospitals contributing the most to total billing volume.
-
-
+**Insight:**
+Patient volumes are evenly distributed across major chronic conditions, highlighting diversified healthcare demand.
 
 ---
 
-6️⃣ Admission Type Analysis by Gender
+### 4️⃣ Age vs. Billing Amount
 
-Visualization: Stacked Bar / Percentage Chart
+**Visualization Type:** Scatter Plot
+**Metrics Used:** Patient Age, Billing Amount
 
-Admission Types:
+**Description:**
+Illustrates the relationship between patient age and billing amount.
 
-Elective
+**Insight:**
 
-Urgent
-
-Emergency
-
-
-Segmentation: Male vs Female
-
-Key Insight: Admission types are evenly distributed across genders, indicating no significant gender-based admission bias.
-
-
+* Billing is spread across all age groups
+* No extreme concentration in a single age band
+* Indicates cost drivers are condition- and treatment-based rather than age-exclusive
 
 ---
 
-🛠️ Technical Stack
+### 5️⃣ Insurance Provider Performance
 
-Power BI Desktop – Dashboard development and visualization
+#### 🔹 Total Billing by Insurance Provider
 
-DAX (Data Analysis Expressions) – KPI calculations and measures
+**Visualization Type:** Bar Chart
+**Metrics Used:** Total Billing Amount, Insurance Provider
 
-Power Query – Data extraction, transformation, and modeling
+**Providers Included:**
 
+* Cigna – **~$287M**
+* Medicare – **~$286M**
+* Blue Cross – **~$283M**
+* UnitedHealthcare – **~$282M**
+* Aetna – **~$279M**
 
-
----
-
-🔍 Key Insights
-
-Healthcare billing is evenly distributed across genders, with no major disparity.
-
-Major medical conditions contribute similar patient volumes and billing impact.
-
-Insurance providers show balanced billing contributions, indicating diversified payer coverage.
-
-The recent decline in billing trends suggests partial or incomplete data for the latest period.
-
-
+**Insight:**
+Billing is evenly distributed across major insurers, indicating a well-diversified payer mix with no over-reliance on a single provider.
 
 ---
 
-🚀 Future Enhancements
+### 6️⃣ Medical Condition vs. Insurance Provider Matrix
 
-Cost forecasting and trend prediction
+**Visualization Type:** Table / Matrix
+**Metrics Used:** Total Billing Amount
 
-Drill-through analysis by hospital and condition
+**Dimensions:**
 
-Time-to-admission and length-of-stay metrics
+* Rows: Medical Conditions
+* Columns: Insurance Providers (Aetna, Blue Cross, Cigna)
 
-Integration with outcomes or readmission data
-
-
+**Purpose:**
+Enables cross-comparison of billing contribution by condition and insurer, supporting reimbursement and contract analysis.
 
 ---
+
+### 7️⃣ Provider Performance Analysis
+
+#### 🔹 Top Doctors by Billing
+
+**Visualization Type:** Ranked Bar Chart
+**Metrics Used:** Total Billing Amount, Doctor Name
+
+**Top Performers (Sample):**
+
+* Michael Smith – **$0.78M**
+* Robert Smith – **$0.63M**
+* John Smith – **$0.61M**
+* Robert Johnson – **$0.52M**
+* David Smith – **$0.47M**
+
+**Insight:**
+Highlights high-billing physicians for workload analysis, performance reviews, and operational planning.
+
+---
+
+#### 🔹 Top 10 Hospitals by Billing
+
+**Visualization Type:** Treemap
+**Metrics Used:** Total Billing Amount, Hospital Name
+
+**Purpose:**
+Identifies hospitals contributing the most to overall billing volume, supporting capacity planning and strategic investments.
+
+---
+
+### 8️⃣ Admission Type Analysis by Gender
+
+**Visualization Type:** Stacked Percentage Bar Chart
+**Metrics Used:** Admission Type, Gender, Patient Count
+
+**Admission Types:**
+
+* Elective
+* Urgent
+* Emergency
+
+**Insight:**
+
+* Admission patterns are evenly distributed between males and females
+* No significant gender-based bias in admission types
+
+---
+
+## 🎛️ Filters & Parameters
+
+The dashboard includes interactive slicers for:
+
+* **Medical Condition**
+* **Insurance Provider**
+* **Gender**
+* **Year / Date Range**
+
+These parameters dynamically update all KPIs and visuals to support deep-dive analysis.
+
+---
+
+## 🛠️ Technical Stack
+
+* **Power BI Desktop** – Data modeling and visualization
+* **Power Query** – Data extraction, cleaning, and transformation
+* **DAX (Data Analysis Expressions)** – KPI calculations and business logic
+* **Star Schema Data Model** – Optimized for analytical performance
+
+---
+
+## 🔍 Key Analytical Insights
+
+* Healthcare billing is **balanced across genders**
+* Chronic conditions contribute **similar patient volumes and cost impact**
+* Insurance billing is **evenly distributed**, reducing payer risk
+* High-billing doctors and hospitals can be clearly identified for operational review
+* Recent billing decline reflects **data completeness issues**, not actual cost reduction
+
+---
+
+## 🚀 Future Enhancements
+
+* Predictive **cost forecasting and trend modeling**
+* Drill-through pages by **hospital, doctor, and condition**
+* **Length of stay** and **time-to-admission** metrics
+* Integration with **clinical outcomes and readmission rates**
+* Cost-to-outcome efficiency analysis
+
+---
+
+## 📁 Intended Audience
+
+* Healthcare Administrators
+* Financial & Operations Analysts
+* Hospital Management
+* Insurance & Policy Stakeholders
+* Data & BI Professionals
+
+---
+
+## ✅ Conclusion
+
+This Power BI Healthcare Expenses Report provides a **holistic, data-driven view** of healthcare costs, utilization, and provider performance. By combining financial, demographic, and clinical dimensions, the dashboard enables smarter decisions, improved transparency, and better healthcare cost management.
+
